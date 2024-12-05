@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <script src="/index.js"></script>
+    <title>Number Guessing Game</title>
+</head>
+<header>
+    <h1> Welcome to Raj   Gaming   world </h1>
+</header>
+<body>
+    <main>
+       
+
+    <div id="containerGuess">
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You have 10 attempts to guess the right number.</p><br>
+        <h2 id="head2">Guess a number</h2><br>
+        <input type="text" name="guess" id="guess" autofocus="true"><br>
+        <button id="submitguess">Submit Guess</button>
+    
+        <div class="resultParas">
+            <p>Previous Guesses: <span id="guesses"></span></p>
+            <p id="guessRemaingContainer">Guesses Remaining: <span id="lastResult" value="10">10</span></p>
+            <p id="lowOrHi"></p>
+        </div>
+                <div id="randNum"> 
+                    
+                </div>
+        <div id="time">
+            <label for="timeLabel">Your Local Time :</label>
+            <h3 id="timeSpan"></h3>
+        </div>
+    </div>
+
+</body>
+</html>
