@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const confettiContainer = document.querySelector('.confetti-container');
     const remGuess = document.querySelector('#lastResult');
     let randNum = Math.floor(Math.random() * 100 + 1);  
-    console.log(randNum);
     
 
     btnGuess.addEventListener('click', () => {
