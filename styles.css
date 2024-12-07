@@ -7,7 +7,7 @@
 body {
    
     background: #0f3854;
-    background: radial-gradient(ellipse at center, #595a5b 0%, #313030 70%);
+    background: radial-gradient(ellipse at center, #136bc4 0%, #1b1b1b 70%);
     background-size: 100%;
     color: aliceblue;
     overflow-y: scroll;
@@ -71,7 +71,7 @@ p{
     left: -1%;
     top: 1%;
     font-size: 27px;
-    color: aliceblue;
+    color: rgb(231, 233, 235);
 
 }
 
