@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,71 @@
     <title>Number Guessing Game</title>
 </head>
 <header>
-    <h1> Welcome to Raj   Gaming   world </h1>
+    <h1> Welcome to Raj Gaming world </h1>
 </header>
+<hr id="headhr">
+
 <body>
     <main>
-       
 
-    <div id="containerGuess">
-        <p>Try and guess a random number between 1 and 100.</p>
-        <p>You have 10 attempts to guess the right number.</p><br>
-        <h2 id="head2">Guess a number</h2><br>
-        <input type="text" name="guess" id="guess" autofocus="true"><br>
-        <button id="submitguess">Submit Guess</button>
-    
-        <div class="resultParas">
-            <p>Previous Guesses: <span id="guesses"></span></p>
-            <p id="guessRemaingContainer">Guesses Remaining: <span id="lastResult" value="10">10</span></p>
-            <p id="lowOrHi"></p>
+
+        <div id="containerGuess">
+            <p>Try and guess a random number between 1 and 100.</p>
+            <p>You have 10 attempts to guess the right number.</p><br>
+            <h2 id="head2">Guess a number</h2><br>
+            <input type="text" name="guess" id="guess" autofocus="true" autocomplete="off"><br>
+            <button id="submitguess">Submit Guess</button>
+           
+
+            <div class="resultParas">
+                <p>Previous Guesses: <span id="guesses"></span></p>
+                <p id="guessRemaingContainer">Guesses Remaining: <span id="lastResult" value="10">10</span></p>
+                <p id="lowOrHi"></p>
+            </div>
+            <div id="randNum" style="font-size: large;">
+
+            </div>
+            <div id="time">
+                <label for="timeLabel" style="font-size:medium;color: #368edb;">Your Local Time :</label>
+                <h3 id="timeSpan" style="color: #368edb;"></h3>
+            </div>
+
+
         </div>
-                <div id="randNum"> 
-                    
-                </div>
-        <div id="time">
-            <label for="timeLabel">Your Local Time :</label>
-            <h3 id="timeSpan"></h3>
+
+        <footer>
+            <hr id="headhr"><br>
+            <div id="disclamer" style="margin: 0 10px 8px 5px; ">
+                <pre
+                    style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large; color: #368edb; font-weight: bold; font-size: large;">  Disclaimer : <marquee behavior="" direction="" style="color: aliceblue; font-weight: normal; font-size:medium; margin-right: 5px;">You use this game at your own risk. We are not
+                        responsible for any unintended
+                        consequences or any issues that may arise
+                        from playing this game. You use this game at your own risk. We are not
+                        responsible for any unintended
+                        consequences or any issues that may arise
+                        from playing this game.</marquee></pre>
+                <br>
+                <span>
+                    <p style="margin-bottom: 1px; text-align: center;">Copyright © Rajesh 2024. All Rights Reserved.
+                    </p><br>
+
+                </span>
+            </div>
+        </footer>
+        <div class="confetti-container" style="margin-left: 50%;">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>       
         </div>
-    </div>
+        
+      
+          
+      
 
 </body>
+
 </html>

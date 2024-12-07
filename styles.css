@@ -5,11 +5,16 @@
 }
 
 body {
-    background-color: rgb(67, 65, 65);
+   
+    background: #0f3854;
+    background: radial-gradient(ellipse at center, #595a5b 0%, #313030 70%);
+    background-size: 100%;
     color: aliceblue;
     overflow-y: scroll;
     overflow-x: scroll;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    
 }
 
 h1 {
@@ -19,7 +24,7 @@ h1 {
     text-align: center;
     margin-top: 30px;
     font-style: italic;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .main {
@@ -46,7 +51,7 @@ input[type='text'] {
             justify-content: center;
             overflow: hidden;
             width: 57%;
-            height: 17%;
+            height: 11%;
             FONT-SIZE: xxx-large;
             FONT-WEIGHT: 900;
             TEXT-ALIGN: CENTER;
@@ -54,31 +59,34 @@ input[type='text'] {
 
 p{
     margin-top: 1%;
-    font-size: larger;
+    font-size:medium;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
 
 
-#time {
+#time{
     position: relative;
-    left: -2%;
+    left: -1%;
     top: 1%;
-    font-size: 40px;
+    font-size: 27px;
+    color: aliceblue;
 
 }
 
 #containerGuess {
         height: 75vh;
         width: 60vw;
-        border: 1px solid white;
-        border-radius: 8px;
+        border: 6px solid rgba(218, 218, 223, 0.707);
+        border-radius: 10px;
         position: relative;
         left: 18%;
-        margin-top: 3vh;
+        margin-top: 4vh;
         text-align: center;
         padding: 26px;
+        box-shadow:  1px 2px rgba(0, 0, 0, 0.1),
+            3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #submitguess {
@@ -101,3 +109,118 @@ p{
             text-align: -webkit-center;
             margin-top: 4%;
 }
+
+
+#headhr{
+position: relative;
+top: 10px;
+bottom: 5px;
+margin: 0 24px 0 24px;
+color: aliceblue;
+font-size: 10px;
+
+
+}
+html,
+body {
+    height: 100%;
+}
+                .confetti-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    display: none;
+                    /* Initially hidden */
+                    overflow: hidden;
+                    pointer-events: none;
+                    /* Prevent confetti from blocking clicks */
+                }
+        
+                .confetti {
+                    position: absolute;
+                    width: 10px;
+                    height: 20px;
+                    background-color: #f00;
+                    transform: rotate(45deg);
+                    opacity: 0;
+                    animation: confettiFall 2s linear infinite;
+                }
+        
+                .confetti:nth-child(1) {
+                    left: 10px;
+                    animation-delay: 0.1s;
+                    background-color: #f00;
+                }
+        
+                .confetti:nth-child(2) {
+                    left: 50px;
+                    animation-delay: 0.3s;
+                    background-color: #ff0000;
+                }
+        
+                .confetti:nth-child(3) {
+                    left: 80px;
+                    animation-delay: 0.5s;
+                    background-color: #e60000;
+                }
+        
+                .confetti:nth-child(4) {
+                    left: 20px;
+                    animation-delay: 0.2s;
+                    background-color: #ff6347;
+                }
+        
+                .confetti:nth-child(5) {
+                    left: 60px;
+                    animation-delay: 0.4s;
+                    background-color: #ff4500;
+                }
+        
+                .confetti:nth-child(6) {
+                    left: 90px;
+                    animation-delay: 0.6s;
+                    background-color: #b22222;
+                }
+        
+                .confetti:nth-child(7) {
+                    left: 30px;
+                    animation-delay: 0.15s;
+                    background-color: #f00;
+                }
+        
+                .confetti:nth-child(8) {
+                    left: 70px;
+                    animation-delay: 0.35s;
+                    background-color: #ff0000;
+                }
+        
+                .confetti:nth-child(9) {
+                    left: 100px;
+                    animation-delay: 0.55s;
+                    background-color: #e60000;
+                }
+        
+                .confetti:nth-child(10) {
+                    left: 40px;
+                    animation-delay: 0.25s;
+                    background-color: #ff6347;
+                }
+        
+               
+                @keyframes confettiFall {
+                    0% {
+                        transform: translateY(0) rotate(45deg);
+                        opacity: 0;
+                    }
+        
+                    50% {
+                        opacity: 1;
+                    }
+        
+                    100% {
+                        transform: translateY(100vh) rotate(45deg);
+                        opacity: 0;
+                    }
+                }
