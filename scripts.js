@@ -10,17 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnGuess = document.querySelector('#submitguess');
     let prevGuessValue = [];
-    let playGame = true;
+    let playGame = false;
     let remainingGuess = 10;
     let isStartedGame = false;
     const prevGuess = document.querySelector('#guesses');
     const confettiContainer = document.querySelector('.confetti-container');
-
-    const randNum = Math.floor(Math.random() * 100 + 1);  
+    const remGuess = document.querySelector('#lastResult');
+    let randNum = Math.floor(Math.random() * 100 + 1);  
+    console.log(randNum);
+    
 
     btnGuess.addEventListener('click', () => {
         let inptGuess = parseInt(document.querySelector('#guess').value);    
-        const remGuess = document.querySelector('#lastResult');
         const message = document.querySelector('#lowOrHi');
         const guessContainer = document.querySelector('#guessRemaingContainer');
         const randNumber = document.querySelector('#randNum');
@@ -34,11 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btnGuess.textContent = 'Submit Guess'
             randNumber.textContent=''
             message.textContent = '';
-            prevGuess.innerText = ''
+            prevGuess.innerText = '';
             remGuess.textContent = '10'
+            inptGuess='';
             remainingGuess = 10;
-            isStartedGame = true
-            playGame = false;
+            isStartedGame = true;
+            playGame=false
+            prevGuessValue = [];
             confettiContainer.style.display = 'none';
 
         }
@@ -49,14 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
              if (inptGuess < randNum) {
                  message.textContent = 'Your guess number is too low'
                  message.style.color = 'red'
-                 //randNumber.textContent = `Better luck next time -😁 ${randNum} 😁`;
                  calculatePreviousValue(inptGuess);
 
 
              } else if (inptGuess > randNum) {
                  message.textContent = 'Your guess number is too high';
                  message.style.color = 'red'
-                // randNumber.textContent = `Better luck next time -😁 ${randNum} 😁`;
                  calculatePreviousValue(inptGuess);
              } 
             
@@ -66,14 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (inptGuess == randNum) {
                 guessContainer.style.display = 'hidden';
                 document.querySelector('#guess').style.visibility = 'hidden';
+                document.querySelector('.resultParas').style.visibility = 'hidden' 
                 randNumber.textContent = '🎉Congratulation! Your guess is correct  and  You have won myntra coupon code- MYNTRA300🎉';  
                 btnGuess.textContent = 'Start New Game',
                 confettiContainer.style.display = 'block';
-                document.querySelector('.resultParas').style.display='none'     
+                isStartedGame = false;
+                message.textContent = '';    
                 btnGuess.textContent = 'Start New Game'
-                prevGuessValue = [];
-                
-                playGame = true;
+               
+                IsfromBeg=true
+                inptGuess = '';
+                startButton();
                 
 
             }
@@ -83,10 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isStartedGame) {
                 message.textContent = '';
                 isStartedGame = false;
+                playGame=false;
             } else {
                 randNumber.textContent='';
                 message.textContent = 'Please give Valid input ';
                 message.style.color = 'red'
+
             }
 
         }
@@ -106,15 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
     function startButton() {
         btnGuess.textContent = 'Start New Game'
         prevGuessValue = [];
-        remainingGuess = 0;
         playGame = true;
+        randNum = Math.floor(Math.random() * 100 + 1);
 
     }
     function calculatePreviousValue(inptGuess) {
         prevGuessValue.push(inptGuess);
+       // remGuess.textContent = --remainingGuess;
         prevGuess.innerText = ` ${prevGuessValue},`
         document.querySelector('#guess').autofocus;
         document.querySelector('#guess').value = '';
+        document.querySelector('#guess').style.visibility = 'visible';
+        document.querySelector('.resultParas').style.visibility = 'visible' 
+        
     }
 
 
